@@ -1,0 +1,41 @@
+
+
+
+
+\section{Summary of Essential Information}
+\label{sec:conclusion}
+
+The approach used in this thesis is substantially different to  the concept of pixel-wise representation. This creates flexibility when finding similarities in images.
+
+The thesis approach can be summarized as follows.
+The pipeline estimates the relative importance of different features in a query image. When executing the pipeline, the uniqueness of the data is exploited. The resulting trained model is scene dependent but therefore versatile and robust. If the weight vector is precisely calculated based on ten iterations, any arbitrarily selected image can be classified. Limitations occur, if the size of the dataset is too small and hardly any good matches are found for a specific query image. Furthermore, the classifier performs poorly, if the query image is too cluttered. In this situation, the Support Vector Machine is not able to determine the important objects of the image which decreases the likelihood of finding matching images. In addition to the tests performed and applications mentioned by Shrivastava et al., this thesis discusses also cross-domain matching by searching for non-photographic results and finding matches for specific scenes in videos.
+
+As already described in \prettyref{ch:relWork}, the approach of cross-domain matching is performed without making domain-specific changes, i.e. it is mainly indifferent to the domain of the query image and any image without restrictions can be trained and classified. Different approaches for diverse domains are not required which is a significant improvement in cross-domain matching.
+
+
+\section{Outlook}
+\label{sec:futureWork}
+
+%\paragraph{Align Storybook/Comic to Video}
+
+In general, it would be interesting to combine the approach used in this thesis with others. For example, using a local self-similarity descriptor as described in \prettyref{ch:relWork} \cite{shechtman} could improve the classifier.
+
+For matching comics with films a solution to match exaggerations and hyperbolic representations would be needed. A potential solution is to develop a deeper understanding of the image. Such improvement is also necessary, if the classifier is not able to determine the important parts due to cluttering. \cite{shrivastava-sa11} \newline
+Van Gemert et al. \cite{gemert} propose an approach for scene categorization. Image statistics and color invariant texture information are used in order to extend the codebook approach \cite{gemert}. \newline
+Content-based image retrieval can also be done by using machine learning algorithms like Convolutional Neural Networks as described by Wan et al. \cite{wan}.
+
+Runtime optimization if, for example, aligning a complete storybook or comic with a matching video would be a further improvement. At the moment, there is one classifier for each scene needed to determine its location in the video. If the classifier would be trained with more than two classes, more scenes could be detected at once. Therefore, another type of classifier would have to be chosen. \newline
+It could be interesting to add the concept of Zhu et al. \cite{bookVideoAlignment} about book to video alignment. The approach employs, a mixture of text and images to reduce problems of aligning a book to a video. 
+
+%\paragraph{Deeper Image Understanding}
+
+
+%\paragraph{Decrease Computational Costs}
+
+A principal component analysis \cite{pearson}, meaning a statistical procedure, could be helpful to presort the unknown images in order to speed up the training as well as the matching process. With this technique negative images could already be rejected before starting the main process.
+
+The computational costs of the approach factually also limit the usage in practice. As said before, the training process is time consuming while the matching is quite fast depending on the choice of the number of levels in the subwindow search. A solution could be a pre-computing of a faster representation for the space of the query images \cite{shrivastava-sa11}.
+This would fasten up the training process and would make the approach more valuable for several useful applications.
+
+If turned into effective practice, meaning, if used by individuals like photographer or in production processes by significant applications, improvements can be realized. 
+All in all, already the high number of applications discussed throughout the thesis in combination with the potential to improve the process regarding quality and time consumption shows that the used approach has significant potential in the future.

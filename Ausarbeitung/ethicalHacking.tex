@@ -1,0 +1,55 @@
+\documentclass[a4paper,cleardoubleempty,BCOR1cm]{scrbook}
+
+\input{header}
+
+\title{Thesis Template}
+\author{Florian Grimm \thanks{e-mail: f.grimm@student.uni-tuebingen.de}\\Vanessa Kirchner \thanks{e-mail: vanessa.kirchner@student.uni-tuebingen.de} }
+\date{\today}
+\begin{document}
+
+\input{teaser}
+
+\chapter*{Abstract}
+\input{content/abstract}
+
+%\chapter*{Acknowledgments}
+%If you have someone to Acknowledge ;)
+
+\tableofcontents
+
+%% braucht kein Mensch ...
+%\listoffigures
+%\listoftables
+
+\chapter{Introduction}
+\input{content/introduction}
+
+\chapter{Related Work}
+\label{ch:relWork}
+\input{content/relatedWork}
+
+
+
+\chapter{Conclusion}
+\input{content/conclusion}
+
+
+\appendix
+\chapter{Appendix}
+\input{content/appendix}
+
+
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+%\addcontentsline{toc}{section}{Literatur} 
+%\bibliographystyle{plainnat} 
+%\addcontentsline{toc}
+%\bibliographystyle{alpha}
+%\bibliographystyle{IEEEtran}
+%\bibliographystyle{plainnat}
+\bibliography{bibliography}
+
+
+
+\end{document}
+
