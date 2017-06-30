@@ -6,19 +6,26 @@
 
 \subsection{TrueCrypt}
 TrueCrypt is a software developed by the TrueCrypt Foundation that can be used for data encryption especially for hard drives or other removable media such as sticks. The TrueCrypt icon is shown in \prettyref{fig:truecrypt}. It is possible to fully encrypt or just partially encrypt the devices. TrueCrypt is running on Windows, Mac OS X and Linux. The source code is available for everyone but nevertheless not open source. The official website wrote a message on the 28th Mai 2014 that the development of TrueCrypt will be ceased after Mai 2014. 
-The website of TrueCrypt recommends to use Bitlocker because TrueCrypt contains unsolved security problems. 
+The website of TrueCrypt recommends to use Bitlocker because TrueCrypt contains unsolved security problems as further described in the next paragraph. 
 Already in June 2013, a fork of TrueCrypt called VeraCrypt has been separated and is still developed as described in \prettyref{sec:vera}. \\
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1.5in]{images/truecrypt.png}
-	\caption{TrueCrypt Icon}
+	\caption{TrueCrypt Icon (http://icons.iconarchive.com/icons/sbstnblnd/plateau/512/Apps-truecrypt-icon.png)}
 	\label{fig:truecrypt}
 \end{figure}
 
+
 It is possible to encrypt a whole device, a partition of a device or to create an encrypted container. The encryption algorithms AES (\prettyref{sec:aes}), Twofish (\prettyref{sec:twofish}) and Serpent (\prettyref{sec:serpent}) can be chosen. It is also possible to use multiple algorithms successively. \\
 
-The concept of plausible deniability is included in TrueCrypt. This means the possibility to hide traces of hidden data. By using this concept, it should be impossible to prove the existence of encrypted data. TrueCrypt uses the concept in order to hide a hidden container inside another encrypted container. If the password of the first container is hacked, it is still needed to find the second, inner password. This can distract the attacker from the important data and shows him unimportant alibi data. Nevertheless, traces can also be found on the physical memory, in the system software or in the encryption software. In August 2016, a possibility to prove the existence of a hidden container has been developed. A correction of this error has been included in VeraCrypt. 
+The concept of plausible deniability is included in TrueCrypt. This means the possibility to hide traces of hidden data. By using this concept, it should be impossible to prove the existence of encrypted data. TrueCrypt uses the concept in order to hide a hidden container inside another encrypted container. If the password of the first container is hacked, it is still needed to find the second, inner password. This can distract the attacker from the important data and shows him unimportant alibi data. Nevertheless, traces can also be found on the physical memory, in the system software or in the encryption software. In August 2016, a possibility to prove the existence of a hidden container has been developed. A correction of this error has been included in VeraCrypt. \\
+
+Additionally, TrueCrypt can be executed on a USB device, so further usable on different computers. Also encryption of SSDs is a popular field of encryption and possible with TrueCrypt. 
+
+
+\subsubsection{Security Problems}
+Further security standards are developed constantly. Therefore, using TrueCrypt can lead to massive security problems because of deprecated encryption algorithms. 
 
 
 \todo{cite? Wikipedia?}
